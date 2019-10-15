@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>Oculux | Page Blank</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="Oculux Bootstrap 4x admin is super flexible, powerful, clean &amp; modern responsive admin dashboard with unlimited possibilities.">
+<meta name="author" content="GetBootstrap, design by: puffintheme.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="http://cdn.bootstrapmb.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../assets/vendor/animate-css/vivify.min.css">
+
+<link rel="stylesheet" href="../assets/vendor/summernote/dist/summernote.css"/>
+<link rel="stylesheet" href="../assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css">
+<link rel="stylesheet" href="../assets/vendor/parsleyjs/css/parsley.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="../html/assets/css/site.min.css">
+
+</head>
+<body class="theme-cyan font-montserrat light_version">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+    </div>
+</div>
+
+<!-- 右侧栏 -->
+<div class="themesetting">
+    <a href="javascript:void(0);" class="theme_btn"><i class="icon-magic-wand"></i></a>
+    <div class="card theme_color">
+        <div class="header">
+            <h2>主题颜色</h2>
+        </div>
+        <ul class="choose-skin list-unstyled mb-0">
+            <li data-theme="green"><div class="green"></div></li>
+            <li data-theme="orange"><div class="orange"></div></li>
+            <li data-theme="blush"><div class="blush"></div></li>
+            <li data-theme="cyan" class="active"><div class="cyan"></div></li>
+            <li data-theme="indigo"><div class="indigo"></div></li>
+            <li data-theme="red"><div class="red"></div></li>
+        </ul>
+    </div>
+    <div class="card font_setting">
+        <div class="header">
+            <h2>字体设置</h2>
+        </div>
+        <div>
+            <div class="fancy-radio mb-2">
+                <label><input name="font" value="font-krub" type="radio"><span><i></i>Krub Google 字体</span></label>
+            </div>
+            <div class="fancy-radio mb-2">
+                <label><input name="font" value="font-montserrat" type="radio" checked><span><i></i>Montserrat Google 字体</span></label>
+            </div>
+            <div class="fancy-radio">
+                <label><input name="font" value="font-roboto" type="radio"><span><i></i>Robot Google 字体</span></label>
+            </div>
+        </div>
+    </div>
+    <div class="card setting_switch">
+        <div class="header">
+            <h2>Settings</h2>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                白色模式
+                <div class="float-right">
+                    <label class="switch">
+                        <input type="checkbox" class="lv-btn" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item">
+                左右翻转
+                <div class="float-right">
+                    <label class="switch">
+                        <input type="checkbox" class="rtl-btn">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item">
+                水平菜单
+                <div class="float-right">
+                    <label class="switch">
+                        <input type="checkbox" class="hmenu-btn" >
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item">
+                迷你菜单
+                <div class="float-right">
+                    <label class="switch">
+                        <input type="checkbox" class="mini-sidebar-btn">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!--	右侧栏-->
+
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+
+<div id="wrapper">
+
+    <!--	顶部导航栏-->
+    <nav class="navbar top-navbar">
+        <div class="container-fluid">
+
+            <div class="navbar-left">
+                <div class="navbar-btn">
+                    <a href="index.html"><img src="../assets/images/icon.svg" alt="Oculux Logo" class="img-fluid logo"></a>
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+                </div>
+                <ul class="nav navbar-nav">
+                    <div style="margin-top: 10px">
+                        <h4><span style="color: rgb(66, 66, 66);margin-left: 20px;">后台管理系统</span></h4>
+                    </div>
+                </ul>
+
+            </div>
+
+            <div class="navbar-right">
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+
+
+                        <li><a href="page-login.html" class="icon-menu"><i class="icon-power"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+    </nav>
+    <!--	顶部导航栏-->
+
+
+    <!--侧边栏-->
+    <div id="left-sidebar" class="sidebar">
+        <div class="navbar-brand">
+            <a href="index.html"><img src="../assets/images/icon.svg" alt="Oculux Logo" class="img-fluid logo"><span>KidKid</span></a>
+            <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu icon-close"></i></button>
+        </div>
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <div class="user_div">
+                    <img src="../assets/images/user.png" class="user-photo" alt="User Profile Picture">
+                </div>
+                <div class="dropdown">
+                    <span>欢迎,管理员</span>
+                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown" ><strong>李华</strong></a>
+                    <ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
+                        <li><a href="page-profile.html"><i class="icon-user"></i>个人主页</a></li>
+                        <li class="divider"></li>
+                        <li><a href="page-login.html"><i class="icon-power"></i>注销</a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav id="left-sidebar-nav" class="sidebar-nav">
+                <ul id="main-menu" class="metismenu">
+                    <li class="header">主菜单</li>
+                    <li >
+                        <a href="page-profile.html"><i class="icon-home"></i><span>个人主页</span></a>
+
+                    </li>
+
+                    <li class="header">后台管理</li>
+                    <li ><a href="user-list.html"><i class="icon-users"></i><span>用户列表</span></a></li>
+                    <li class="active open">
+                        <a href="#story" class="has-arrow"><i class="icon-book-open"></i><span>童话故事</span></a>
+                        <ul>
+                            <li><a href="story-list.html">童话列表</a></li>
+                            <li class="active open"><a href="add-story.html">添加童话</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="page-gallery.html"><i class="icon-picture"></i><span>绘画</span></a></li>
+                    <li><a href="recording-list.html"><i class=" icon-microphone"></i><span>配音</span></a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--	侧边栏-->
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row clearfix">
+                    <div class="col-md-6 col-sm-12">
+                        <h2>添加童话</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">首页</a></li>
+                            <li class="breadcrumb-item"><a href="#">童话</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">添加</li>
+                            </ol>
+                        </nav>
+                    </div>            
+
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card planned_task">
+                        <div class="header">
+                            <h2>html格式化文章编辑器</h2>
+                            <ul class="header-dropdown dropdown">                                
+                                <li><a href="javascript:void(0);" class="full-screen"><i class="icon-frame"></i></a></li>
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another Action</a></li>
+                                        <li><a href="javascript:void(0);">Something else</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                            <!---------编辑框---------->
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="body">
+                                        <div class="summernote">
+
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大熊很喜欢吃水果，他上街买了一袋草莓、一袋香蕉、一袋苹果。</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大熊提着一篮水果往家走。走不远，路旁河马在砌地基盖房子，他叫住了大熊：“您好，这块石头真重，麻烦您过来帮助我搬一下好吗？”</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“好的，没问题！”大熊把水果放在一块石板上，走过去。</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;石板下，有一只青蛙，他蹦出石板，看见了石板上放着的一篮水果，高兴地蹦进水果蓝，钻进了草莓袋里大吃起来。</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一会儿，大熊回来了。青蛙大吃一惊，想蹦出来，来不及了，赶紧往底下钻，让草莓把自己埋了起来。</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大熊提起篮子往家走，他一点也没发觉。到了家里，他把水果放进了冰箱里。</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;突然变得寒冷，青蛙急忙钻出了草莓堆，他一看四周，发现自己已在冰箱里了，大声喊：“快放我出来，快放我出来！”可是，外面的人根本听不到。青蛙抵挡不住寒冷，睡过去了，进入了冬眠状态。</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;傍晚的时候，大熊要吃水果了，他打开冰箱，提出草莓袋，大吃一惊：“呀，怎么有一只青蛙呀！”他急忙把青蛙用干净暖和的毛巾被捂起来：“我知道了，一定是黑心肠的水果商，把青蛙装进袋子当作草莓卖给我！”</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不久，青蛙被焐暖了身子，醒过来了。大熊连忙道歉：“对不起！对不起！我根本没想到这个水果商会这么坏，会把一只青蛙当做草莓卖给我！实在对不起，让你受苦了！”</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青蛙的脸直发烧：“没，没关系，没关系。”</div><div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“我去煮一碗姜糖水来，给你驱驱寒！”大熊说着往厨房走去。</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一会儿，一碗热气腾腾的姜糖水端到了青蛙面前：“快喝吧，趁热喝，才能驱寒！”</div><div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青蛙喝完了姜糖水，道了谢，离开了大熊家。</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二天早晨，大熊打开门，只见门口放着一袋草莓。大熊很奇怪：“这是？”接着他一拍脑袋：“哦，一定是水果商赔给我的！这个水果商，总算知道错了……”</div>
+                                            <div style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不远处大树后的一只青蛙，看大熊拎起草莓进了屋，走出来，离去……</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---------编辑框---------->
+
+
+                        <div class="card">
+                            <div class="header">
+                                <h2>文章提交</h2>
+                            </div>
+							<!--输入表单-->
+                            <div class="body">
+                                <form id="basic-form" method="post" novalidate>
+                                    <div class="form-group">
+                                        <label> 标 题</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label> 作 者</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label> 正 文</label>
+                                        <textarea class="form-control" rows="5" cols="30" required></textarea>
+                                    </div>
+									
+                                    <br>
+                                    <button type="submit" class="btn btn-primary">添 加</button>
+                                </form>
+                            </div>
+							<!--输入表单-->
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Javascript -->
+<script src="../html/assets/bundles/libscripts.bundle.js"></script>    
+<script src="../html/assets/bundles/vendorscripts.bundle.js"></script>
+<script src="../html/assets/bundles/mainscripts.bundle.js"></script>
+<script src="../assets/vendor/summernote/dist/summernote.js"></script>
+
+<script src="../assets/vendor/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+<script src="../assets/vendor/parsleyjs/js/parsley.min.js"></script>
+
+
+<script>
+    $(function() {
+        // validation needs name of the element
+        $('#food').multiselect();
+
+        // initialize after multiselect
+        $('#basic-form').parsley();
+    });
+</script>
+
+</body>
+</html>
