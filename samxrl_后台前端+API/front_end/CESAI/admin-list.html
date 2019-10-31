@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>KidKid | 用户列表</title>
+<title>KidKid | 管理员列表</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -21,15 +21,15 @@
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="../html/assets/css/site.min.css">
 
-<!--<style>-->
-<!--    td.details-control {-->
-<!--    background: url('../assets/images/details_open.png') no-repeat center center;-->
-<!--    cursor: pointer;-->
-<!--}-->
-<!--    tr.shown td.details-control {-->
-<!--        background: url('../assets/images/details_close.png') no-repeat center center;-->
-<!--    }-->
-<!--</style>-->
+<style>
+    td.details-control {
+    background: url('../assets/images/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+    tr.shown td.details-control {
+        background: url('../assets/images/details_close.png') no-repeat center center;
+    }
+</style>
 </head>
 <body class="theme-cyan font-montserrat light_version">
 
@@ -190,8 +190,8 @@
                     </li>
                     
                     <li class="header">后台管理</li>
-					<li class="active open"><a href="app-inbox.html"><i class="icon-users"></i><span>用户列表</span></a></li>
-					<li><a href="app-calendar.html"><i class="icon-user"></i><span>管理员列表</span></a></li>
+					<li><a href="app-inbox.html"><i class="icon-users"></i><span>用户列表</span></a></li>
+					<li class="active open"><a href="app-calendar.html"><i class="icon-user"></i><span>管理员列表</span></a></li>
                     <li>
                         <a href="#Contact" class="has-arrow"><i class="icon-book-open"></i><span>童话故事</span></a>
                         <ul>
@@ -201,9 +201,10 @@
                     </li>
                     
                     <li><a href="app-chat.html"><i class="icon-picture"></i><span>绘画</span></a></li>
-					<li><a href="app-calendar.html"><i class=" icon-microphone"></i><span>配音</span></a></li> 
+					<li><a href="app-calendar.html"><i class=" icon-microphone"></i><span>配音</span></a></li>
 					<li><a href="app-calendar.html"><i class=" icon-music-tone"></i><span>儿歌</span></a></li>
                     <li><a href="app-calendar.html"><i class=" ti-video-clapper"></i><span>动画</span></a></li>
+					
                     
                 </ul>
             </nav>     
@@ -216,18 +217,18 @@
             <div class="block-header">
                 <div class="row clearfix">
                     <div class="col-md-6 col-sm-12">
-                        <h1>用户管理</h1>
+                        <h1>管理员管理</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">首页</a></li>
                             
-                            <li class="breadcrumb-item active" aria-current="page">用户列表</li>
+                            <li class="breadcrumb-item active" aria-current="page">管理员列表</li>
                             </ol>
                         </nav>
                     </div>            
                     <div class="col-md-6 col-sm-12 text-right hidden-xs">
                         
-                        <a href="#" class="btn btn-sm btn-success" title="Themeforest" data-type="confirm" data-toggle="modal" data-target="#AddForm"><i class="icon-plus"></i> 添加用户</a>
+                        <a href="#" class="btn btn-sm btn-success" title="Themeforest" data-type="confirm" data-toggle="modal" data-target="#AddForm"><i class="icon-plus"></i> 添加管理员</a>
                     </div>
                 </div>
             </div>
@@ -237,7 +238,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2>用户列表<small>可复制到剪贴板或下载CSV文件和打印表格</small></h2>
+                            <h2>管理员列表<small>可复制到剪贴板或下载CSV文件和打印表格</small></h2>
                             <ul class="header-dropdown dropdown">
                                 
                                 <li><a href="javascript:void(0);" class="full-screen"><i class="icon-frame"></i></a></li>
@@ -250,10 +251,9 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>用户名</th>
+                                            <th>名称</th>
+                                            <th>权限</th>
                                             <th>邮箱</th>
-                                            <th>电话</th>
-                                            <th>创建时间</th>
                                             <th>修改 | 删除</th>
 											
 											
@@ -261,11 +261,10 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                           <th>ID</th>
-                                            <th>用户名</th>
+                                           	<th>ID</th>
+                                            <th>名称</th>
+                                            <th>权限</th>
                                             <th>邮箱</th>
-                                            <th>电话</th>
-                                            <th>创建时间</th>
                                             <th>修改 | 删除</th>
 											
                                         </tr>
@@ -274,143 +273,198 @@
                                       
 										<tr>
                                             <td>1</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
+											</td>
+                                        </tr>
+										<tr>
+                                            <td>1</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
+                                            <td>
+												
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
+											</td>
+                                        </tr>
+										<tr>
+                                            <td>1</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
+                                            <td>
+												
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
+											</td>
+                                        </tr>
+										<tr>
+                                            <td>1</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
+                                            <td>
+												
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
+											</td>
+                                        </tr>
+										<tr>
+                                            <td>1</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
+                                            <td>
+												
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
+											</td>
+                                        </tr>
+										<tr>
+                                            <td>1</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
+                                            <td>
+												
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
+											</td>
+                                        </tr>
+										<tr>
+                                            <td>1</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
+                                            <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
 										<tr>
                                             <td>2</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
 										<tr>
                                             <td>3</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
-                                        <tr>
+										<tr>
                                             <td>4</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
 										<tr>
                                             <td>5</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
 										<tr>
                                             <td>6</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
-												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
 										<tr>
                                             <td>7</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
-												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
 										<tr>
                                             <td>8</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
 										<tr>
                                             <td>9</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
 										<tr>
                                             <td>10</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
 										<tr>
                                             <td>11</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
                                         </tr>
 										<tr>
                                             <td>12</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
+                                            <td>李华</td>
+                                            <td>1</td>
+                                            <td>admin@kidkid.com</td>
                                             <td>
-												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
-												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
-											</td>
-                                        </tr>
-										<tr>
-                                            <td>13</td>
-                                            <td>张三</td>
-                                            <td>kidkid@user.com</td>
-                                            <td>13800000000</td>
-                                            <td>2019/09/25</td>
-                                            <td>
+												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit"></i></button>
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>	
 											</td>
@@ -418,7 +472,6 @@
 										
                                     </tbody>
                                 </table>
-								
                             </div>
                         </div>
                     </div>
@@ -429,13 +482,12 @@
     </div>
     
 </div>
-	
 <!-- 编辑表单 -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalCenterTitle">修改管用户信息</h5>
+				<h5 class="modal-title" id="exampleModalCenterTitle">修改管理员信息</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				</button>
@@ -444,18 +496,18 @@
 				<div class="modal-body">
 
 					<div class="form-group">
-						<label> 用户名</label>
-						<input type="text" id="edit_username" name="edit_username" class="form-control" required>
+						<label> 名 称</label>
+						<input type="text" id="edit_adminame" name="edit_adminame" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label> 权 限</label>
+						<input type="text" id="edit_level" name="edit_level" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label> 邮 箱</label>
 						<input type="text" id="edit_mail" name="edit_mail" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label> 电 话</label>
-						<input type="text" id="edit_tel" name="edit_tel" class="form-control" required>
-					</div>
-				  <div class="form-group">
 						<label> 新密码</label>
 						<input type="password" id="edit_paw1" name="edit_paw" class="form-control" required>
 						<br>
@@ -463,12 +515,12 @@
 						<input type="password" id="edit_paw2" name="edit_paw" class="form-control" onkeyup="validate2()" required>
 						<span id="edit_msg"></span>
 					</div>
-				  <input type="text" id="user_id" name="user_id" class="form-control" hidden>
+					<input type="text" id="admin_id" name="admin_id" class="form-control" hidden>
 
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-round btn-default" data-dismiss="modal">取消</button>
-					<button type="submit" id="edit_sub" class="btn btn-round btn-primary">保存</button>
+					<button type="submit" class="btn btn-round btn-primary">保存</button>
 				</div>
 			</form>
 		</div>
@@ -477,12 +529,11 @@
 <!-- 编辑表单 -->
 	
 <!-- 添加表单 -->
-	
 <div class="modal fade" id="AddForm" tabindex="-1" role="dialog" aria-labelledby="AddFormTitle" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="AddFormTitle">添加用户</h5>
+				<h5 class="modal-title" id="AddFormTitle">添加管理员</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				</button>
@@ -491,17 +542,17 @@
 				<div class="modal-body">
 
 					<div class="form-group">
-						<label> 用户名</label>
-						<input type="text" id="add_username" name="add_username" class="form-control" required>
+						<label> 名 称</label>
+						<input type="text" id="add_adminame" name="add_adminame" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label> 权 限</label>
+						<input type="text" id="add_level" name="add_level" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label> 邮 箱</label>
-						<input type="email" id="add_mail" name="add_mail" class="form-control" required>
-					</div>
-					<div class="form-group">
-						<label> 电 话</label>
-						<input type="text" id="add_tel" name="add_tel" class="form-control" required>
-					</div>
+						<input type="text" id="add_mail" name="add_mail" class="form-control" required>
+					</div> 
 					<div class="form-group">
 						<label> 密 码</label>
 						<input type="password" id="add_paw1" name="add_paw" class="form-control" required>
@@ -510,20 +561,20 @@
 						<input type="password" id="add_paw2" name="add_paw" class="form-control" onkeyup="validate1()" required>
 						<span id="add_msg"></span>
 					</div>
-					
 
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-round btn-default" data-dismiss="modal">取消</button>
-					<button type="submit" id="add_sub" class="btn btn-round btn-primary">保存</button>
+					<button type="submit" class="btn btn-round btn-primary">保存</button>
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
 <!-- 添加表单 -->
-
+	
 <!-- Javascript -->
+	
 	
 <script>
 	
@@ -554,6 +605,7 @@ function validate2() {
 }
 	
 </script>
+	
 	
 <script src="../html/assets/bundles/libscripts.bundle.js"></script>    
 <script src="../html/assets/bundles/vendorscripts.bundle.js"></script>

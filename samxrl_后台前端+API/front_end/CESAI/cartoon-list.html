@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>KidKid | 配音</title>
+<title>KidKid | 动画列表</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -16,7 +16,8 @@
 <link rel="stylesheet" href="../assets/vendor/jquery-datatable/fixedeader/dataTables.fixedcolumns.bootstrap4.min.css">
 <link rel="stylesheet" href="../assets/vendor/jquery-datatable/fixedeader/dataTables.fixedheader.bootstrap4.min.css">
 <link rel="stylesheet" href="../assets/vendor/sweetalert/sweetalert.css"/>
-    <link rel="stylesheet" href="../assets/vendor/themify-icons/themify-icons.css">
+<link rel="stylesheet" href="../assets/vendor/themify-icons/themify-icons.css">
+<link rel="stylesheet" href="../assets/vendor/jquery-steps/jquery.steps.css">
 
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="../html/assets/css/site.min.css">
@@ -202,8 +203,8 @@
                     
                     <li><a href="app-chat.html"><i class="icon-picture"></i><span>绘画</span></a></li>
 					<li><a href="app-calendar.html"><i class=" icon-microphone"></i><span>配音</span></a></li>
-					<li class="active open"><a href="app-calendar.html"><i class=" icon-music-tone"></i><span>儿歌</span></a></li>
-                    <li><a href="app-calendar.html"><i class=" ti-video-clapper"></i><span>动画</span></a></li>
+					<li><a href="app-calendar.html"><i class=" icon-music-tone"></i><span>儿歌</span></a></li>
+                    <li class="active open"><a href="app-calendar.html"><i class=" ti-video-clapper"></i><span>动画</span></a></li>
                     
                 </ul>
             </nav>     
@@ -216,18 +217,17 @@
             <div class="block-header">
                 <div class="row clearfix">
                     <div class="col-md-6 col-sm-12">
-                        <h1>配音管理</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
+<nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">首页</a></li>
                             
-                            <li class="breadcrumb-item active" aria-current="page">配音列表</li>
+                            <li class="breadcrumb-item active" aria-current="page">动画列表</li>
                             </ol>
                         </nav>
                     </div>            
                     <div class="col-md-6 col-sm-12 text-right hidden-xs">
                         
-                       <a href="#" class="btn btn-sm btn-success" title="Themeforest" data-type="confirm" data-toggle="modal" data-target="#AddForm"><i class="icon-plus"></i> 添加配音</a>
+                       <a href="#" class="btn btn-sm btn-success" title="Themeforest" data-type="confirm" data-toggle="modal" data-target="#AddForm"><i class="icon-plus"></i> 添加动画</a>
                     </div>
                 </div>
             </div>
@@ -237,7 +237,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2>配音列表<small>可复制到剪贴板或下载CSV文件和打印表格</small></h2>
+                            <h2>动画列表<small>可复制到剪贴板或下载CSV文件和打印表格</small></h2>
                             <ul class="header-dropdown dropdown">
                                 
                                 <li><a href="javascript:void(0);" class="full-screen"><i class="icon-frame"></i></a></li>
@@ -250,9 +250,7 @@
                                     <thead>
                                        <tr>
                                             <th>ID</th>
-										  	<th>标题</th>
-                                            <th>童话ID</th>
-                                            <th>用户ID</th>
+                                            <th>标题</th>
                                             <th>创建时间</th>
 											<th>播放</th>
                                             <th>删除</th>
@@ -263,11 +261,9 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-										  	<th>标题</th>
-                                            <th>童话ID</th>
-                                            <th>用户ID</th>
+                                            <th>标题</th>
                                             <th>创建时间</th>
-											<th>播放</th>
+                                            <th>播放</th>
                                             <th>删除</th>
 											
                                         </tr>
@@ -276,116 +272,86 @@
                                       
 										<tr>
                                             <td>1</td>
-											<td>配音1</td>
-                                            <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
 											<td>
-												<audio style="width: 200px"  controls>
-												  <source src="horse.mp3" type="audio/mpeg">
-												  <source src="horse.ogg" type="audio/ogg">
-												  您的浏览器不支持该音频格式。
-												</audio>
+                                                <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#player"><i class=" icon-control-play"></i></button>
 											</td>
                                             <td>
-												
 												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-		
-											</td>
-                                        </tr>
-										<tr>
-                                            <td>1</td>
-											<td>配音1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2019/09/25</td>
-											<td>
-												<audio style="width: 200px"  controls>
-												  <source src="horse.mp3" type="audio/mpeg">
-												  您的浏览器不支持该音频格式。
-												</audio>
-											</td>
-                                            <td>
-												
-												<button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-		
 											</td>
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>配音1</td>
-                                            <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
                                             <td>
-                                                <audio style="width: 200px"  controls>
-                                                    <source src="horse.mp3" type="audio/mpeg">
-                                                    您的浏览器不支持该音频格式。
-                                                </audio>
+                                                <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#player"><i class=" icon-control-play"></i></button>
                                             </td>
                                             <td>
-
                                                 <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>配音1</td>
-                                            <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
                                             <td>
-                                                <audio style="width: 200px"  controls>
-                                                    <source src="horse.mp3" type="audio/mpeg">
-                                                    您的浏览器不支持该音频格式。
-                                                </audio>
+                                                <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#player"><i class=" icon-control-play"></i></button>
                                             </td>
                                             <td>
-
                                                 <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>配音1</td>
-                                            <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
                                             <td>
-                                                <audio style="width: 200px"  controls>
-                                                    <source src="horse.mp3" type="audio/mpeg">
-                                                    您的浏览器不支持该音频格式。
-                                                </audio>
+                                                <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#player"><i class=" icon-control-play"></i></button>
                                             </td>
                                             <td>
-
                                                 <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>配音1</td>
+                                            <td>1</td>
+                                            <td>2019/09/25</td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#player"><i class=" icon-control-play"></i></button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
                                             <td>
-                                                <audio style="width: 200px"  controls>
-                                                    <source src="horse.mp3" type="audio/mpeg">
-                                                    您的浏览器不支持该音频格式。
-                                                </audio>
+                                                <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#player"><i class=" icon-control-play"></i></button>
                                             </td>
                                             <td>
-
                                                 <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2019/09/25</td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm" data-toggle="modal" data-target="#player"><i class=" icon-control-play"></i></button>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                            </td>
+                                        </tr>
+
 										
                                     </tbody>
                                 </table>
+
                             </div>
                         </div>
                     </div>
@@ -394,6 +360,8 @@
 
         </div>
     </div>
+	
+	
     
 </div>
 	
@@ -403,7 +371,7 @@
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="AddFormTitle">添加配音</h5>
+				<h5 class="modal-title" id="AddFormTitle">添加动画</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				</button>
@@ -413,13 +381,16 @@
 
 					<div class="form-group">
 						<label> 名 称</label>
-						<input type="text" id="recording_name" name="recording_name" class="form-control" required>
+						<input type="text" id="cartoon_name" name="cartoon_name" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label> 配音文件</label>
-						<input type="text" id="recording_file" name="recording_file" class="form-control" required>
+						<label> 封 面</label>
+						<input type="text" id="cartoon_img" name="cartoon_img" class="form-control" required>
 					</div>
-					
+					<div class="form-group">
+						<label> 动画文件</label>
+						<input type="text" id="cartoon_file" name="cartoon_file" class="form-control" required>
+					</div>
 
 				</div>
 				<div class="modal-footer">
@@ -431,7 +402,28 @@
 	</div>
 </div>
 <!-- 添加表单 -->
-	
+
+<!-- 播放窗口 -->
+<div class="modal fade launch-pricing-modal" id="player" tabindex="-1" role="dialog" aria-labelledby="player" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document" style="width: 1000px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="playerTitle">动画标题</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+           <div class="modal-body">
+                <video style="max-width: 100%" controls="controls" autoplay="autoplay"  imgview="../assets/images/CESAI_img/login.png" src="https://vdse.bdstatic.com//a950020e6f073510a79ca5a53fbbfe1b?authorization=bce-auth-v1%2F40f207e648424f47b2e3dfbb1014b1a5%2F2017-05-11T09%3A02%3A31Z%2F-1%2F%2F48c8557239af0af2b45fde89e0d9ff12fbec6d51938779e2e3733740c260f20f" poster=""></video>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 播放窗口 -->
+
+
+
+
 
 <!-- Javascript -->
 <script src="../html/assets/bundles/libscripts.bundle.js"></script>    
@@ -446,5 +438,12 @@
 <script src="../assets/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
 <script src="../html/assets/bundles/mainscripts.bundle.js"></script>
 <script src="../html/assets/js/pages/tables/jquery-datatable.js"></script>
+
+<script src="../assets/vendor/dropify/js/dropify.js"></script>
+<script src="../assets/vendor/jquery-steps/jquery.steps.js"></script><!-- JQuery Steps Plugin Js -->
+
+<script src="assets/bundles/mainscripts.bundle.js"></script>
+<script src="assets/js/pages/forms/dropify.js"></script>
+<script src="assets/js/pages/forms/form-wizard.js"></script
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>KidKid | 配音</title>
+<title>KidKid | 儿歌</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -216,18 +216,17 @@
             <div class="block-header">
                 <div class="row clearfix">
                     <div class="col-md-6 col-sm-12">
-                        <h1>配音管理</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
+<nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">首页</a></li>
                             
-                            <li class="breadcrumb-item active" aria-current="page">配音列表</li>
+                            <li class="breadcrumb-item active" aria-current="page">儿歌列表</li>
                             </ol>
                         </nav>
                     </div>            
                     <div class="col-md-6 col-sm-12 text-right hidden-xs">
                         
-                       <a href="#" class="btn btn-sm btn-success" title="Themeforest" data-type="confirm" data-toggle="modal" data-target="#AddForm"><i class="icon-plus"></i> 添加配音</a>
+                       <a href="#" class="btn btn-sm btn-success" title="Themeforest" data-type="confirm" data-toggle="modal" data-target="#AddForm"><i class="icon-plus"></i> 添加儿歌</a>
                     </div>
                 </div>
             </div>
@@ -237,7 +236,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2>配音列表<small>可复制到剪贴板或下载CSV文件和打印表格</small></h2>
+                            <h2>儿歌列表<small>可复制到剪贴板或下载CSV文件和打印表格</small></h2>
                             <ul class="header-dropdown dropdown">
                                 
                                 <li><a href="javascript:void(0);" class="full-screen"><i class="icon-frame"></i></a></li>
@@ -250,9 +249,8 @@
                                     <thead>
                                        <tr>
                                             <th>ID</th>
-										  	<th>标题</th>
-                                            <th>童话ID</th>
-                                            <th>用户ID</th>
+                                            <th>标题</th>
+                                            <th>歌手</th>
                                             <th>创建时间</th>
 											<th>播放</th>
                                             <th>删除</th>
@@ -262,10 +260,9 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID</th>
-										  	<th>标题</th>
-                                            <th>童话ID</th>
-                                            <th>用户ID</th>
+                                           <th>ID</th>
+                                            <th>标题</th>
+                                            <th>歌手</th>
                                             <th>创建时间</th>
 											<th>播放</th>
                                             <th>删除</th>
@@ -276,7 +273,6 @@
                                       
 										<tr>
                                             <td>1</td>
-											<td>配音1</td>
                                             <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
@@ -295,7 +291,6 @@
                                         </tr>
 										<tr>
                                             <td>1</td>
-											<td>配音1</td>
                                             <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
@@ -313,7 +308,6 @@
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>配音1</td>
                                             <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
@@ -331,7 +325,6 @@
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>配音1</td>
                                             <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
@@ -349,7 +342,6 @@
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>配音1</td>
                                             <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
@@ -367,7 +359,23 @@
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>配音1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2019/09/25</td>
+                                            <td>
+                                                <audio style="width: 200px"  controls>
+                                                    <source src="horse.mp3" type="audio/mpeg">
+                                                    您的浏览器不支持该音频格式。
+                                                </audio>
+                                            </td>
+                                            <td>
+
+                                                <button type="button" class="btn btn-sm btn-default js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
                                             <td>1</td>
                                             <td>1</td>
                                             <td>2019/09/25</td>
@@ -386,6 +394,7 @@
 										
                                     </tbody>
                                 </table>
+								<video width="500px" height="500px" controls="controls" autoplay="autoplay" fileid="350b034befaa43b0bc79efec56045d05" video_id="2175" imgview="/storage/image/1/ffb81389/59b8f4677c0c1_s.png" src="https://vdse.bdstatic.com//a950020e6f073510a79ca5a53fbbfe1b?authorization=bce-auth-v1%2F40f207e648424f47b2e3dfbb1014b1a5%2F2017-05-11T09%3A02%3A31Z%2F-1%2F%2F48c8557239af0af2b45fde89e0d9ff12fbec6d51938779e2e3733740c260f20f" poster=""></video>
                             </div>
                         </div>
                     </div>
@@ -394,6 +403,8 @@
 
         </div>
     </div>
+	
+	
     
 </div>
 	
@@ -403,7 +414,7 @@
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="AddFormTitle">添加配音</h5>
+				<h5 class="modal-title" id="AddFormTitle">添加儿歌</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				</button>
@@ -413,11 +424,15 @@
 
 					<div class="form-group">
 						<label> 名 称</label>
-						<input type="text" id="recording_name" name="recording_name" class="form-control" required>
+						<input type="text" id="song_name" name="song_name" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label> 配音文件</label>
-						<input type="text" id="recording_file" name="recording_file" class="form-control" required>
+						<label> 封 面</label>
+						<input type="text" id="song_img" name="song_img" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label> 儿歌文件</label>
+						<input type="text" id="song_file" name="song_file" class="form-control" required>
 					</div>
 					
 
