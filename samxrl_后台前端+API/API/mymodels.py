@@ -15,15 +15,15 @@ class CartoonTable(db.Model):
     cartoon = db.Column(db.String(255), nullable=False)
     title = db.Column(db.String(30), nullable=False)
     picture = db.Column(db.String(255))
-    collection_id = db.Column(db.ForeignKey('collection_tabe.id'), index=True)
+    collection_id = db.Column(db.ForeignKey('collection_table.id'), index=True)
     create_time = db.Column(db.DateTime, nullable=False)
     update_time = db.Column(db.DateTime)
 
-    collection = db.relationship('CollectionTabe', primaryjoin='CartoonTable.collection_id == CollectionTabe.id', backref='cartoon_tables')
+    collection = db.relationship('CollectionTable', primaryjoin='CartoonTable.collection_id == CollectionTable.id', backref='cartoon_tables')
 
 
-class CollectionTabe(db.Model):
-    __tablename__ = 'collection_tabe'
+class CollectionTable(db.Model):
+    __tablename__ = 'collection_table'
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(30), nullable=False)

@@ -12,7 +12,7 @@ from Delete_file import delete
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI']="**********************************"
+app.config['SQLALCHEMY_DATABASE_URI']="mysql+pymysql://*************************/CESAI"
 
 app.config['SQLALCHEMY_COMMIT-TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -118,7 +118,13 @@ def GetDraw():
 @app.route('/GetStory/',methods=['GET'])
 def GetStory():
     a = datetime.datetime.now()
-    storys = db.session.query(mymodels.StoryTable).all()#获取所有故事
+    page = request.args.get('Page')  # 获取页码参数
+    if page == None:
+        page = 1
+    else:
+        page = int(page)
+    query = db.session.query(mymodels.StoryTable).paginate(page,20,True)#获取所有故事
+    storys = query.items
     data = {}  # 返回的json
     if len(storys) == 0:
         data['code'] = '404'
@@ -126,6 +132,8 @@ def GetStory():
     else:
         data['code'] = '200'
         data['msg'] = 'SUCCESS'
+        data['page'] = str(query.page)
+        data['has_next'] = str(query.has_next)
         datas = {}
         lists = []
         for num in range(0,len(storys)):
@@ -154,7 +162,13 @@ def GetStory():
 @app.route('/GetSong/',methods=['GET'])
 def GetSong():
     a = datetime.datetime.now()
-    songs = db.session.query(mymodels.SongTable).all()#获取所有儿歌
+    page = request.args.get('Page')  # 获取页码参数
+    if page == None:
+        page = 1
+    else:
+        page = int(page)
+    query = db.session.query(mymodels.SongTable).paginate(page,20,True)#获取所有儿歌
+    songs = query.items
     data = {}  # 返回的json
     if len(songs) == 0:
         data['code'] = '404'
@@ -162,6 +176,8 @@ def GetSong():
     else:
         data['code'] = '200'
         data['msg'] = 'SUCCESS'
+        data['page'] = str(query.page)
+        data['has_next'] = str(query.has_next)
         datas = {}
         lists = []
         for num in range(0,len(songs)):
@@ -226,7 +242,7 @@ def GetRecording():
 @app.route('/GetCollection/',methods=['GET'])
 def GetCollection():
     a = datetime.datetime.now()
-    collections = db.session.query(mymodels.CollectionTabe).all() # 获取所有合集
+    collections = db.session.query(mymodels.CollectionTable).all() # 获取所有合集
     data = {}  # 返回的json
     if len(collections) == 0:
         data['code'] = '404'
@@ -258,7 +274,13 @@ def GetCartoon():
     a = datetime.datetime.now()
 
     CollectionId = request.args.get('CollectionId')# 获取合集id参数
-    cartoons = db.session.query(mymodels.CartoonTable).filter_by(collection_id=CollectionId).all()#通过合集id查找动画
+    page = request.args.get('Page') #获取页码参数
+    if page == None:
+        page = 1
+    else:
+        page = int(page)
+    query = db.session.query(mymodels.CartoonTable).filter_by(collection_id=CollectionId).paginate(page,20,True)#通过合集id查找动画
+    cartoons = query.items
     data = {}  # 返回的json
     if len(cartoons) == 0:
         data['code'] = '404'
@@ -266,6 +288,8 @@ def GetCartoon():
     else:
         data['code'] = '200'
         data['msg'] = 'SUCCESS'
+        data['page'] = str(query.page)
+        data['has_next'] = str(query.has_next)
         datas = {}
         lists = []
         for num in range(0, len(cartoons)):
@@ -303,10 +327,54 @@ def Delete():
         data['msg'] = 'No such file or directory'
     return  data
 
+# 添加绘画
+@app.route('/AddDraw/',methods=['POST'])
+def AddDraw():
+    a = datetime.datetime.now()
+    userid = request.form['id']
+    url = request.form['url']
+    data = {}
+    createtime = datetime.datetime.now()
+    NewDraw = mymodels.DrawTable(user_id=userid,image=url,create_time=createtime)
+    db.session.add(NewDraw)
+    db.session.flush()#提交记录
+    id = NewDraw.id#获得id
+    # db.session.commit()#插入记录
+    data['code'] = '200'
+    data['msg'] = 'SUCCESS'
+    data['data'] = {'id': NewDraw.id}
+
+    b = datetime.datetime.now()
+    print(b - a)
+    return jsonify(data)
+
+# 添加配音
+@app.route('/AddRecording/',methods=['POST'])
+def AddRecording():
+    a = datetime.datetime.now()
+    userid = request.form['id']
+    url = request.form['url']
+    StoryId = request.form['StoryId']
+    title = request.form['title']
+
+    data = {}
+    createtime = datetime.datetime.now()
+    NewRecording = mymodels.RecordingTable(user_id=userid,recording=url,story_id=StoryId,title=title,create_time=createtime)
+    db.session.add(NewRecording)
+    db.session.flush()#提交记录
+    id = NewRecording.id#获得id
+    # db.session.commit()#插入记录
+    data['code'] = '200'
+    data['msg'] = 'SUCCESS'
+    data['data'] = {'id': NewRecording.id}
+
+    b = datetime.datetime.now()
+    print(b - a)
+    return jsonify(data)
 
 
 if __name__=='__main__':
-    app.debug = True
+    #app.debug = True
     app.run(host='0.0.0.0',port=5000)
 
 
