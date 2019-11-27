@@ -487,12 +487,13 @@
 				<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<form id="add-form" method="post" novalidate>
+			<form id="add-form" method="post" >
 				<div class="modal-body">
 
 					<div class="form-group">
 						<label> 用户名</label>
-						<input type="text" id="add_username" name="add_username" class="form-control" required>
+						<input type="text" id="add_username" name="add_username" class="form-control"  oninput="keyup()"  onkeyup="keyup()" required>
+                        <span id="name_msg"></span>
 					</div>
 					<div class="form-group">
 						<label> 邮 箱</label>
@@ -526,7 +527,23 @@
 <!-- Javascript -->
 	
 <script>
-	
+
+
+var specialKey = "「」[`~!#$^&*()=|{}':;',\\[\\].<>/?~！#￥……&*（）——|{}【】‘；：”“'。，、？]‘’+-". split('');
+   function keyup() {
+       var value = document.getElementById('add_username').value;
+       for (var i = 0; i < value.length; i++) {
+           if (specialKey.indexOf(value[i]) > -1) {
+               console.log("get")
+               document.getElementById('add_username').value = value.replace(value[i], '');
+               i--;
+               document.getElementById("name_msg").innerHTML="<font color='red'>请勿输入特殊字符</font>";
+               value = document.getElementById('add_username').value;
+               console.log(value)
+           }
+       }
+   }
+
 function validate1() {
 	var pw1 = document.getElementById("add_paw1").value;
 	var pw2 = document.getElementById("add_paw2").value;
