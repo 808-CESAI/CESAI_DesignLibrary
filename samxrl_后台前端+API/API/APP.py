@@ -12,11 +12,12 @@ from Delete_file import delete
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI']="mysql+pymysql://*************************/CESAI"
+app.config['SQLALCHEMY_DATABASE_URI']="mysql+pymysql://***************************/CESAI"
 
 app.config['SQLALCHEMY_COMMIT-TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+
 
 
 db = SQLAlchemy(app)
@@ -47,6 +48,8 @@ def login():
     print(paw.hexdigest())
     b = datetime.datetime.now()
     print(b - a)
+    db.session.commit()  # 插入记录
+    db.session.close()
     return jsonify(data)
 
 # 注册
@@ -81,6 +84,8 @@ def signin():
     print(paw.hexdigest())
     b = datetime.datetime.now()
     print(b - a)
+    db.session.commit()  # 插入记录
+    db.session.close()
     return jsonify(data)
 
 
@@ -111,6 +116,8 @@ def GetDraw():
         data['data'] = img
     b = datetime.datetime.now()
     print(b - a)
+    db.session.commit()  # 插入记录
+    db.session.close()
     return jsonify(data)
 
 
@@ -155,6 +162,8 @@ def GetStory():
 
     b = datetime.datetime.now()
     print(b - a)
+    db.session.commit()  # 插入记录
+    db.session.close()
     return jsonify(data)
 
 
@@ -199,6 +208,8 @@ def GetSong():
 
     b = datetime.datetime.now()
     print(b - a)
+    db.session.commit()  # 插入记录
+    db.session.close()
     return jsonify(data)
 
 
@@ -235,6 +246,8 @@ def GetRecording():
         data['data'] = datas
     b = datetime.datetime.now()
     print(b - a)
+    db.session.commit()  # 插入记录
+    db.session.close()
     return jsonify(data)
 
 
@@ -266,6 +279,8 @@ def GetCollection():
         data['data'] = datas
     b = datetime.datetime.now()
     print(b - a)
+    db.session.commit()  # 插入记录
+    db.session.close()
     return jsonify(data)
 
 # 通过合集id获取动画
@@ -309,6 +324,8 @@ def GetCartoon():
         data['data'] = datas
     b = datetime.datetime.now()
     print(b - a)
+    db.session.commit()  # 插入记录
+    db.session.close()
     return jsonify(data)
 
 
@@ -325,6 +342,8 @@ def Delete():
     else:
         data['code'] = '612'
         data['msg'] = 'No such file or directory'
+    db.session.commit()  # 插入记录
+    db.session.close()
     return  data
 
 # 添加绘画
@@ -346,6 +365,8 @@ def AddDraw():
 
     b = datetime.datetime.now()
     print(b - a)
+    db.session.commit()  # 插入记录
+    db.session.close()
     return jsonify(data)
 
 # 添加配音
@@ -363,13 +384,14 @@ def AddRecording():
     db.session.add(NewRecording)
     db.session.flush()#提交记录
     id = NewRecording.id#获得id
-    # db.session.commit()#插入记录
     data['code'] = '200'
     data['msg'] = 'SUCCESS'
     data['data'] = {'id': NewRecording.id}
 
     b = datetime.datetime.now()
     print(b - a)
+    db.session.commit()  # 插入记录
+    db.session.close()
     return jsonify(data)
 
 
